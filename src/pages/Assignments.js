@@ -130,8 +130,7 @@ const Assignments = () => {
                         <button onClick={() => setModalOpen(true)}><IconDocumentAdd /> Add New Assignment</button>
                     }
                 </div>
-            </div>        
-            <h3 className='subheading'>Cohort Assignments</h3>
+            </div>
             <div className="cohort_resources">
                 {!pending ?
                     assignmentList?.length > 0 ?
@@ -279,6 +278,7 @@ const Assignments = () => {
                     <button onClick={() => setModalOpen(false)} className="close"><IconCloseCircled /></button>
                     <h2>Add new assignment</h2>
                     <select required value={form.category} onChange={(e) => setForm({...form, category: e.target.value})}>
+                        
                         <option value="">Choose Category</option>
                         {categories?.map(category => (
                             <option value={category} key={category}>{category}</option>
