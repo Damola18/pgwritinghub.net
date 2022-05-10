@@ -95,7 +95,7 @@ const Cohorts = () => {
       <>
         <CohortContainer>
             <div className="header">
-                <h1>Cohort</h1>
+                <h1>Course Information</h1>
                 <div className="btns">
                     {userData?.role !== 'student' &&
                         <button onClick={() => setModalOpen(true)}><IconDocumentAdd /> Add New Resource</button>
@@ -103,9 +103,9 @@ const Cohorts = () => {
                 </div>
             </div>            
             <h3 className='subheading'>Lecture Schedule</h3>
-            <p style={{ margin: "10px 0px" }}> Lecture Recurring link: <a href="http://https://meet.google.com/ids-znbb-vkx" target="_blank" rel="noopener noreferrer">https://meet.google.com/ids-znbb-vkx</a></p>
+            <p style={{ margin: "10px 0px" }}> Recurring link: <a href="" target="_blank" rel="noopener noreferrer">Link to be updated</a></p>
             <Schedule />
-            <h3 className='subheading'>Cohort Resources</h3>
+            <h3 className='subheading'>Resources</h3>
             <div className="cohort_resources">
                 {!pending ?
                     resourcesList?.length > 0 ?
