@@ -34,7 +34,7 @@ const Schedule = () => {
                       <td>June 16</td>
                       <td>9-11 am</td>
                       <td>Theoretical frameworks</td>
-                      <td>Dr Kareem Buyana</td>
+                      <td>Dr Sylvia Croese</td>
                   </tr>
                   <tr>
                       <td>4</td>
@@ -48,14 +48,14 @@ const Schedule = () => {
                       <td>June 30</td>
                       <td>9-11 am</td>
                       <td>Citation and referencing</td>
-                      <td>Dr Alice McClure</td>
+                      <td>Dr Nathaniel Babajide</td>
                   </tr>
                   <tr>
                       <td>6</td>
                       <td>July 7</td>
                       <td>9-11 am</td>
                       <td>Navigating the scientific publishing cycle</td>
-                      <td>Dr Sylvia Croese</td>
+                      <td>Dr Sandra Boatemaa</td>
                   </tr>
               </tbody>
           </table>
