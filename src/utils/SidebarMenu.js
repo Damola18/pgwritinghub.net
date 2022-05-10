@@ -18,11 +18,11 @@ export const menuList = [
         ]
     },
     {
-        category: "PROGRAM",
+        category: "PROGRAMME",
         cohort: true,
         menu: [
             {
-                title: "Cohort",
+                title: "Course Information",
                 link: "/cohort",
                 icon: <IconBriefcase />
             },
