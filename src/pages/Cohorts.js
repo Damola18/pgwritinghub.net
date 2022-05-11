@@ -103,7 +103,7 @@ const Cohorts = () => {
                 </div>
             </div>            
             <h3 className='subheading'>Lecture Schedule</h3>
-            <p style={{ margin: "10px 0px" }}> Recurring link: <a href="" target="_blank" rel="noopener noreferrer">Link to be updated</a></p>
+            <p style={{ margin: "10px 0px" }}> Recurring link: <a href="https://meet.google.com/ids-znbb-vkx" target="_blank" rel="noopener noreferrer">Link to be updated</a></p>
             <Schedule />
             <h3 className='subheading'>Resources</h3>
             <div className="cohort_resources">

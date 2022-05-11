@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { getUserProfile } from '../services/UserDataApi'
-import { IconHambuger, IconSidebarExpandLeft, IconSidebarExpandRight } from '../utils/icons'
+
 
 const Navbar = ({openSidebar, toggleSidebar}) => {
     const [showMenu, setShowMenu] = useState(false)
@@ -18,28 +18,26 @@ const Navbar = ({openSidebar, toggleSidebar}) => {
                 <div className="col1">
                     <button className='toggle' onClick={toggleSidebar}>
                         {openSidebar ?
-                            <IconSidebarExpandRight />
+                            <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652259771/hamburger_closed_i3s2cs.svg" alt="hamburger-menu-collapsed"/>
                         :
-                            <IconSidebarExpandLeft />
+                            <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652259730/hamburger_opened_ffcczo.svg" alt="hamburger-menu-active"/>
                         }
                     </button>
                     
                     <a href="/" className='brand'><h1>PG Writing Hub</h1></a>
                 </div>
                 <div className="col2">
-                    {/* <button><IconNotification /></button> */}
                     <a href='/profile' className="profile">
-                        <img src="https://i.postimg.cc/Kzv5mC22/image.png" alt="Profile" />
+                        <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652261813/Vector_cbqkax.svg" alt="Profile" />
                         <span>{userProfile?.username}</span>
                     </a>
                 </div>
                 <button className='toggle hambuger' onClick={() => setShowMenu(!showMenu)}>
-                    <IconHambuger />
+                    <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652260124/user-account_r0jh6e.svg" alt="user-account"/>    
                 </button>
                 {showMenu &&
                     <div className="mobileNav">
                         <div className="links">
-                            {/* <button><IconNotification /></button> */}
                         </div>
                         <a href='/profile' className="profile">
                             <img src="https://i.postimg.cc/Kzv5mC22/image.png" alt="Profile" />
@@ -181,15 +179,22 @@ const NavbarContainer = styled.div`
             }
 
             img {
-                width: 48px;
-                height: 48px;
+                width: 28px;
+                height: 28px;
                 object-fit: contain;
                 border-radius: 50%;
+                color: #213F7D;
             }
 
             span {
                 margin: 0px 10px;
                 color: #213F7D;
+            }
+
+            h6 {
+                position:relative;
+                top:30px;
+                right:95px
             }
 
             svg {
