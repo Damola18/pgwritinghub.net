@@ -1,0 +1,37 @@
+import Temilade from "../../src/images/Headshot_Temilade Sesan.jpg"
+import Elias from "../../src/images/Headshot_Peter Elias.jpg"
+import Nathaniel from "../../src/images/Headshot_Nathaniel_Babajide.jpg"
+import Sylvia from "../../src/images/Headshot_Sylvia Croese.jpg"
+import Sandra from "../../src/images/Headshot_Sandra_Boatemaa_Kushitor.jpg"
+export const lecturerData = [
+    {
+        header:"Dr. Temilade Sesan",
+        image: <img src={Temilade} alt="Temilade Sesan"/>,
+        profile: 
+            `Temilade Sesan holds a Ph.D. in Sociology and Social Policy from the University of Nottingham, UK. Her research interrogates the social, political and cultural dimensions of sustainable development initiatives in the areas of energy, waste management, transportation and urban planning – particularly as they intersect with issues of gender and informality in the sub-Saharan African context. Temilade has received funding for her research from the African Research Universities Alliance, the International Network for Government Science Advice, the International Science Council, the Partnership for Economic Policy, the UK Economic and Social Research Council, the UK Engineering and Physical Sciences Research Council and the United States Agency for International Development. She has published extensively on pathways to co-creating inclusive urban development with marginalised groups in international peer-reviewed academic journals. She teaches postgraduate modules in qualitative research and writing and renewable energy policy at the Centre for Petroleum, Energy Economics and Law, University of Ibadan, Nigeria.`
+    },
+
+    {
+        header:"Dr. Peter Elias",
+        image: <img src={Elias} alt="Peter Elias"/>,
+        profile:`Peter Elias holds a Ph.D. in Geography from the University of Ibadan, Nigeria. He is a Senior Lecturer in the Department of Geography and Team Lead, Lagos Urban Studies Group (LUSG), University of Lagos. He is an Urban and Regional Planner and a Development Geographer. He uses his expertise in transdisciplinary research for Deprived Area Mapping at the City or Neighbourhood Level, Co-design and Co-production of Knowledge, Citizen Science Data, Stakeholders’ Engagement, and Urban Data Governance Framework. He is a Co-Chair of the CODATA-WDS TG on Data from Participatory Mapping for the SDGs and Knowledge Task Group. He is the West African Coordinator of the Citizen Science African Association (CitSAF). He coordinates the University of Lagos Key to the City YouthMappers. Peter is a recipient of the UKRI Development and Innovation for Development in Africa (DIDA); International Science Council LIRA 2030 Research Grant in 2018 and 2020; the NRF South Africa COVID-19 Africa Rapid Grant Fund (CARGF) Award in 2021, Global Change SysTem for Analysis, Research, and Training (START) in 2012, among others. He has over twelve years’ experience in teaching postgraduate students on theoretical foundations for scientific research and writing.`
+    }, 
+
+    {
+        header:"Dr. Sylvia Croese", 
+        image: <img src={Sylvia} alt="Sylvia Croese"/>,
+        profile:"Dr. Sylvia Croese is an urban sociologist who is a Senior Researcher at the South African Research Chair in Spatial Analysis and City Planning at the School of Architecture and Planning of the University of the Witwatersrand and Research Associate with the African Centre for Cities (ACC) at the University of Cape Town. She has conducted extensive research on urban politics, policy and governance through the lens of housing, land, urban infrastructure and mobility, with a focus on Southern and Lusophone Africa. She has published widely on this work in major international journals, as well as three co-edited books: Refractions of the National, the Popular and the Global in African Cities (African Minds, 2021), Reframing the Urban Challenge in Africa: Knowledge Co-production from the South (Routledge, 2021) and Localizing the Sustainable Development Goals in African cities (Springer, in press). Currently, her research examines the transcalar workings of developmental policy circuits as part of the ERC funded comparative research project Making Africa Urban: the transcalar politics of large-scale urban development.",
+    },
+
+    {
+        header:"Dr Nathaniel Babajide",
+        image:<img src={Nathaniel} alt="Nathaniel_Babajide"/>,
+        profile:"Dr Nathaniel Babajide is a Lecturer in Energy Economics at Coventry University’s School of Energy, Construction and Environment. He bagged his M.Sc. (Oil and Gas Economics) and PhD (Energy Economics) degrees from University of Dundee, UK in 2013 and 2017 respectively. Dr Nathaniel has taught applied economics, management and business related courses in various capacities at higher institutions in the UK, including University of Dundee, University of Bolton, Glasgow University GIC, Sheffield University International College, Regent College London as well as overseas.His research interest includes energy systems economics, management and modelling, energy access improvement, energy policy and planning, renewable energy integration alongside environmental and climate change issues. Nathaniel has written several peer-reviewed papers that have appeared in reputable journals and textbooks. In addition, Dr. Nathaniel has been providing economic consulting services to small enterprises, energy companies, environmental groups, governmental and non-governmental agencies on energy issues in developing countries. He is a Fellow of the Higher Education Academy (FHEA) and reviewer for reputable academic journals globally.",
+    },
+
+    {
+        header:"Dr. Sandra Boatemaa Kushitor",
+        image:<img src={Sandra} alt="Sandra Boatemaa Kushitor"/>,
+        profile:"Dr. Sandra Boatemaa Kushitor has academic training in sociology, psychology and a PhD in population studies. She draws on theoretical and methodological perspectives from the social sciences to understand population health in her research. Currently, her research focuses on three distinct yet related areas of population health: population shifts (disease patterns and mortality, urbanization, dynamics of family change,); public health nutrition (nutrition-related non-communicable diseases (NCD), foodways, the nexus between food environment and health) and governance (food system governance, health system governance). Sandra is skillful in both qualitative and quantitative research methodology. Her recent work has transcended boundaries through the use of transdisciplinary research methods. Her publications have focused on NCD risk factors, hypertension prevalence, treatment and control, health system response to NCDs, and food system governance in Ghana, Eswatini, and South Africa. Her work has influenced food system innovations in the Oforikrom Municipality in Ghana and the Western Cape Province in South Africa through Transformation-labs and policy dialogues with public officials and market women. Sandra was a Queen Elizabeth Scholar through McGill University and University of Ghana. Sandra is currently a lecturer at the Ensign Global College, Kpong, Ghana and research fellow at the Centre for Sustainability Transitions, Stellenbosch University, Stellenbosch, South Africa."
+    }
+]
