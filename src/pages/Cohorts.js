@@ -7,6 +7,7 @@ import Schedule from '../Layouts/Schedule'
 import { CreateResource, db, DeleteCategory, EditResources, GetCategories } from '../services/firebase'
 import { getUserProfile } from '../services/UserDataApi'
 import { IconAngleDown, IconCloseCircled, IconDocumentAdd, IconTrashAlt } from '../utils/icons'
+import LecturerProfile from '../Layouts/LecturerProfile'
 
 const Cohorts = () => {
     const [resourcesList, setResourcesList] = useState()
@@ -173,6 +174,9 @@ const Cohorts = () => {
                     <Loader minH="40vh" iconH="80px" iconW="80px" />
                 }
             </div>
+
+            <h3 className='subheading'>Lecturer Profile</h3>
+            <LecturerProfile/>
         </CohortContainer>
         {modalOpen &&
             <NewForumModal>
