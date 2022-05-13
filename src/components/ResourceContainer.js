@@ -1,31 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { IconGoogleDocs, IconYoutubeIcon } from '../utils/icons'
-import { PopupModal } from "react-calendly";
 
 const ResourceContainer = ({resource}) => {
     const {title, link} = resource
-    const [isOpen, setIsOpen] = useState(false)
     return (
         <>
-            <Card onClick={() => setIsOpen(true)} title={title}>
+
+            <Card title={title}>
                 <div className="image">
-                    {link?.includes('docs') ?
-                        <IconGoogleDocs className="docs" />
-                        :
-                        <IconYoutubeIcon />
+                    {link?.substring(link.lastIndexOf('.') + 1) === "doc" || "pdf" || "" ?
+                        <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652362297/link_mswv1k.png" alt="link_icon"/>
+                        : <></>
                     }
                 </div>
                 <div className="body">
-                    <p>{title || ""}</p>
+                    
+                    {/* <p>{title || ""}</p> */}
+                    <div class="link">
+                        <a href={link} alt="values" target="_blank" rel="noreferrer">See content</a>
+                    </div>
+                    
                 </div>
+                
             </Card>
-            <PopupModal
-                url={link?.replace("https://youtu.be/", "https://www.youtube.com/embed/")}
-                onModalClose={() => setIsOpen(false)}
-                open={isOpen}
-                rootElement={document.getElementById("root")}
-            />
+
+
         </>
     )
 }
@@ -35,7 +34,7 @@ export default ResourceContainer
 const Card = styled.div`
     width: 246px;
     min-width: 246px;
-    height: 189px;
+    height:200px;
     border: 1px solid #DADCE0;
     border-radius: 10px;
     margin: 7px;
@@ -75,9 +74,22 @@ const Card = styled.div`
         justify-content: center;
 
         p{
-            overflow: hidden;
             white-space: nowrap;
+            position:relative;
+            bottom:30px
             text-overflow: ellipsis;
+        }
+
+        .link{
+            position:relative;
+            margin-top:35px
+            margin-right:45px
+        }
+        a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
         }
     }
 `
