@@ -97,14 +97,18 @@ const Cohorts = () => {
         <CohortContainer>
             <div className="header">
                 <h1>Course Information</h1>
+
+                
                 <div className="btns">
                     {userData?.role !== 'student' &&
                         <button onClick={() => setModalOpen(true)}><IconDocumentAdd /> Add New Resource</button>
                     }
                 </div>
-            </div>            
-            <h3 className='subheading'>Lecture Schedule</h3>
-            <p style={{ margin: "10px 0px" }}> Recurring link: <a href="https://meet.google.com/ids-znbb-vkx" target="_blank" rel="noopener noreferrer">Link to be updated</a></p>
+            </div>   
+
+            <h3 className='subheading'>General</h3>        
+            <h3 className='subheading'>Lecture schedule</h3>
+            <p style={{ margin: "10px 0px" }}> Recurring link: <a href="https://zoom.us/j/95259016651?pwd=ZXVrd21ERm0wNFJRaG1hcnU2N1hmdz09" target="_blank" rel="noopener noreferrer">https://zoom.us/j/95259016651?pwd=ZXVrd21ERm0wNFJRaG1hcnU2N1hmdz09</a></p>
             <Schedule />
             <h3 className='subheading'>Resources</h3>
             <div className="cohort_resources">
@@ -113,11 +117,11 @@ const Cohorts = () => {
                         <>
                             {resourcesList.map((group, index) => (
                                 <div key={group.id + index}>
-                                    <h1 onClick={() => ToggleCategory(group.id)}>
+                                    <h1 onClick={() => ToggleCategory(group.id)} className="resourceHeader">
                                         <span>
                                             {group.id.replace("_", " ")} 
                                         </span>
-                                        <IconAngleDown />
+                                        <IconAngleDown className="angleDowm" />
                                     </h1>
                                     <div className="resources" style={{ height: selectedGroup === group.id ? "" : "0px" }}>
                                         {userData?.role !== 'student' &&
@@ -146,6 +150,7 @@ const Cohorts = () => {
                                                 </form>
                                             </NewForumModal>
                                         }
+
                                         {deleteModal === group.id &&
                                             <NewForumModal>
                                                 <form onSubmit={(e) => HandleDeleteCategory(e, group.id.replace(" ","_"))}>
@@ -175,7 +180,7 @@ const Cohorts = () => {
                 }
             </div>
 
-            <h3 className='subheading'>Lecturer Profile</h3>
+            <h3 className='subheading'>Lecturer profiles</h3>
             <LecturerProfile/>
         </CohortContainer>
         {modalOpen &&
@@ -192,6 +197,7 @@ const Cohorts = () => {
                     <input type="text" placeholder='Topic' required value={form.title} onChange={(e) => setForm({...form, title: e.target.value})} />
                     <input type="url" placeholder='Link' required value={form.link} onChange={(e) => setForm({...form, link: e.target.value})} />
                     {err && <p style={{ color: "red" }}>{err}</p>}
+
                     {!loading ?
                         <button>Create Resource</button>
                         :
@@ -266,6 +272,10 @@ const CohortContainer = styled.div`
             }
         }
     }
+
+    .resourceHeader{
+        font-size:20px;
+    }
     
     .subheading {
         margin-top: 25px;
@@ -288,7 +298,7 @@ const CohortContainer = styled.div`
                 background: #ccc;
             }
         }
-    
+
         .resources {
             padding: 0px;
             display: flex;
