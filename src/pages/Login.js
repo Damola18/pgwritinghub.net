@@ -90,10 +90,11 @@ const Login = () => {
                         <div className="form-field">
                             <input type={showPass ? "text" : "password"} placeholder='Password' onChange={(e) => setForm({...form, password: e.target.value})} value={password} />
                             <button className='show_btn' onClick={RevealPassword}>
-                                {!showPass ? "show" : "hide"}
+                                {!showPass ? <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652643944/visibility_FILL0_wght200_GRAD0_opsz20_jqqgka.png" alt="show_icon"/> 
+                                : <img src="https://res.cloudinary.com/dutcp8qkx/image/upload/v1652644020/visibility_off_FILL0_wght200_GRAD0_opsz20_f0lwvc.png" alt="hide_icon"/>}
                             </button>
                         </div>
-                        <a href="/" onClick={handleOpenModal}>Forgot PASSWORD?</a>
+                        <a href="/" onClick={handleOpenModal}>Forgot Password?</a>
                         {err && <p style={{ color: "red" }}>{err}</p>}
                         {!pending ?
                             <button className='login_btn'>Log in</button>
