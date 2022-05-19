@@ -185,6 +185,17 @@ export const GetMentors = async () => {
     return mentorList
 }
 
+// Get list of facilitators
+export const GetFacilitators = async () => {
+    let FacilitatorList = []
+    const q = query(collection(db, 'users'), where('role', '==', 'facilitator'))
+    const docs = await getDocs(q)
+    if(docs.empty){
+        return;
+    }
+    docs.forEach(doc => FacilitatorList.push(doc.data()))
+    return FacilitatorList
+}
 
 //Create New Forum
 export const CreateForum = async ( form ) => {
