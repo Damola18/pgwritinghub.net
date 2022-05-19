@@ -12,7 +12,8 @@ const TableRows = ({user}) => {
     const statusColor = {
         student : "#39CD62",
         tutor: "#FF3366",
-        admin: "#E9B200"
+        admin: "#E9B200",
+        facililator:"yellow"
     }
     const handleOpenPop = () => {
         if(popOpen) {
@@ -71,6 +72,7 @@ const TableRows = ({user}) => {
                     {role === 'student' &&
                         <button onClick={handleOpenPop}><IconMenuKebab /></button>
                     }
+                    
                     {popOpen &&
                         <Popover onMouseLeave={handleClosePop} onMouseEnter={handleOpening}>
                             {!pendinga ?
