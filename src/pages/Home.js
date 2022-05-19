@@ -18,6 +18,7 @@ const Home = () => {
           <img src="https://i.postimg.cc/yNfqShbS/Happy-announcement-bro.png" alt="Call for Applications" />
           <div className="content">
             <h1>Call for Applications</h1>
+            {/* <h3>Upcoming course</h3> */}
             <h3>VREF Short Course 2022: Critical Thinking and Writing Skills for Postgraduate Students</h3>
             <button onClick={() => document.location.assign("/call_for_application")}>Read More <IconAngleRightB /> </button>
           </div>
