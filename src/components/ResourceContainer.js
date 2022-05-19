@@ -15,10 +15,12 @@ const ResourceContainer = ({resource}) => {
                 </div>
                 <div className="body">
                     
-                    {/* <p>{title || ""}</p> */}
-                    <div class="link">
+                    <h6>
+                        <a href={link} alt="values" target="_blank" rel="noreferrer" className='link'>{title || ""}</a>
+                    </h6>
+                    {/* <div class="link">
                         <a href={link} alt="values" target="_blank" rel="noreferrer">See content</a>
-                    </div>
+                    </div> */}
                     
                 </div>
                 
@@ -90,6 +92,9 @@ const Card = styled.div`
             height: 100%;
             width: 100%;
             text-decoration: none;
+        }
+        .link{
+            color: #213f7d;
         }
     }
 `
