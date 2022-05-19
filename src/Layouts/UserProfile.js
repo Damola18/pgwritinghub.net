@@ -11,8 +11,8 @@ const UserProfile = ({userData}) => {
                     {/* <img src="https://i.postimg.cc/Kzv5mC22/image.png" alt="profile" /> */}
                     <div className="col">
                         <h1>{userData.firstname} {userData.lastname}</h1>
-                        <p>{userData.username}</p>
-                        <p className='user-email'>Email:{userData.email}</p>
+                        <p className='user-name'>{userData.username}</p>
+                        <p className='user-email'>{userData.email}</p>
                     </div>
                 </div>
                 <div className='column'>
@@ -23,9 +23,6 @@ const UserProfile = ({userData}) => {
                         }
                         {userData?.role === "tutor" &&
                             <p className='role'>Lecturer</p>
-                        }
-                        {userData?.role === "facilitator" &&
-                            <p className='role'>Facilitator</p>
                         }
                         {(userData?.role !== "student" && userData?.role !== 'tutor' ) &&
                             <p className='role'>Facilitator</p>
@@ -147,7 +144,10 @@ const UserHeader = styled.div`
                     }
                 }
             }
-
+            .user-name{
+                position:relative;
+                top:5px;
+            }
             .user-email{
                 position:relative;
                 top:10px;
