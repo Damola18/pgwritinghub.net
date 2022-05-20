@@ -126,7 +126,7 @@ const Assignments = () => {
             <div className="header">
                 <h1>Assignments</h1>
                 <div className="btns">
-                    {userData?.role !== 'student' &&
+                    {userData?.role !== 'student' && userData?.role !== 'facilitator' && 
                         <button onClick={() => setModalOpen(true)}><IconDocumentAdd /> Add New Assignment</button>
                     }
                 </div>

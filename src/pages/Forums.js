@@ -1,5 +1,5 @@
 import { collection, onSnapshot } from 'firebase/firestore'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 import styled from 'styled-components'
 import Loader from '../components/Loader'
 import SearchBar from '../components/SearchBar'
@@ -89,10 +89,12 @@ const Forums = () => {
             </div>
             <SearchBar submitSearch={handleSearch} />
             <div className='tabs'>
-                <button onClick={() => setActiveTab("all")} className={activeTab === 'all'? "active": ""}>All</button>
-                {userData?.role !== 'student' &&
+                <button onClick={() => setActiveTab("all")} className={activeTab === 'all'? "active": ""}>
+                    {/* All */}
+                </button>
+                {/* {userData?.role !== 'student' &&
                     <button onClick={() => setActiveTab("facilitator")} className={activeTab !== 'all'? "active": ""}>Facilitators</button>
-                }
+                } */}
             </div>
             <table>
                 <thead>
@@ -111,7 +113,13 @@ const Forums = () => {
                                     <td><a href={`forums/${forum.id}`}>{forum.title}</a></td>
                                     <td>{forum.participants.length}</td>
                                     <td>{forum.date_created.toDate().toDateString()}</td>
-                                    <td><button onClick={(e) => HandleDeleteForum(e, forum.id)}><IconTrashAlt /></button></td>
+                                        <td>
+                                            {
+                                                userData?.role !== "student" && 
+                                                <button onClick={(e) => HandleDeleteForum(e, forum.id)}><IconTrashAlt /></button>
+                                            }
+                                            
+                                        </td>
                                 </tr>
                             ))
                         :
@@ -132,11 +140,11 @@ const Forums = () => {
             <NewForumModal>
                 <form onSubmit={HandleCreateForum}>
                     <button onClick={() => setModalOpen(false)} className="close"><IconCloseCircled /></button>
-                    <label>Who has access?</label>
+                    {/* <label>Who has access?</label>
                     <select required value={form.access} onChange={(e) => setForm({...form, access: e.target.value})}>
                         <option value="all">All</option>
                         <option value="facilitator">Facilitators</option>
-                    </select>
+                    </select> */}
                     <input type="text" placeholder='Topic' required value={form.title} onChange={(e) => setForm({...form, title: e.target.value})} />
                     {form.access !== "all" &&
                         <input type="password" placeholder='Password' required value={form.password} onChange={(e) => setForm({...form, password: e.target.value})} />
@@ -222,6 +230,7 @@ const CohortContainer = styled.div`
         border-bottom: 2px solid #213F7D;
 
         button {
+            display:none
             padding: 10px 15px;
             border: none;
             outline: none;
@@ -229,7 +238,7 @@ const CohortContainer = styled.div`
             min-width: 80px;
 
             &.active {
-                background: #39CDCC;
+                background: #fff;
             }
         }
     }

@@ -23,7 +23,7 @@ export const menuList = [
         menu: [
             {
                 title: "Course Information",
-                link: "/cohort",
+                link: "/information",
                 icon: <IconBriefcase />
             },
             {

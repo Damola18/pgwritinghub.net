@@ -14,7 +14,6 @@ const CFA = () => {
         </HomeHeader>
         <CFAContainer>
             <div className="body">
-                <p><a href="https://forms.gle/xNWAdqk7CPqjjqbN7" target="_blank" rel="noopener noreferrer" className='link'>Apply now</a></p>
                 <br />
                 <h3>Course description</h3>
                 <p>This is an online short course funded by the <a href="http://www.vref.se/" target="_blank" rel="noopener noreferrer">Volvo Research and Educational Foundations </a> 
@@ -56,13 +55,12 @@ const CFA = () => {
                     </div>
                 </p>
             
-                <h3>Application and eligibility criteria</h3>
+                {/* <h3>Application and eligibility criteria</h3>
                 <p>Applications are now being accepted for the course, which will run weekly from June 2 to August 4. The deadline for application is May 9, 2022. Successful applicants will be notified by May 23. </p>
                 <p>
                     Applicants must be currently enrolled in a master’s or Ph.D. programme at an African university. Priority will be given to scholars of urban transport and mobility, but students in related fields such as urban planning, geography and development can also apply. Women are especially encouraged to apply.  
                 </p>
-                <br />
-                <p><a href="https://forms.gle/xNWAdqk7CPqjjqbN7" target="_blank" rel="noopener noreferrer" className='link'>Apply now</a></p>
+                <br /> */}
             </div>
         </CFAContainer>  
         <Footer /> 

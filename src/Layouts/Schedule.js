@@ -55,7 +55,7 @@ const Schedule = () => {
                       <td>July 7</td>
                       <td>9-11 am</td>
                       <td>Navigating the scientific publishing cycle</td>
-                      <td>Dr Sandra Boatemaa</td>
+                      <td>Dr Sandra Boatemaa Kushitor</td>
                   </tr>
               </tbody>
           </table>
