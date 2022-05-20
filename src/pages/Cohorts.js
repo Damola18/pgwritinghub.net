@@ -100,7 +100,7 @@ const Cohorts = () => {
 
                 
                 <div className="btns">
-                    {userData?.role !== 'student' &&
+                    {userData?.role !== 'student' && userData?.role !== 'facilitator' && 
                         <button onClick={() => setModalOpen(true)}><IconDocumentAdd /> Add New Resource</button>
                     }
                 </div>
