@@ -104,9 +104,7 @@ const Cohorts = () => {
                         <button onClick={() => setModalOpen(true)}><IconDocumentAdd /> Add New Resource</button>
                     }
                 </div>
-            </div>   
-
-            <h3 className='subheading'>General</h3>        
+            </div>      
             <h3 className='subheading'>Lecture schedule</h3>
             <p style={{ margin: "10px 0px" }}> Recurring link: <a href="https://zoom.us/j/95259016651?pwd=ZXVrd21ERm0wNFJRaG1hcnU2N1hmdz09" target="_blank" rel="noopener noreferrer">https://zoom.us/j/95259016651?pwd=ZXVrd21ERm0wNFJRaG1hcnU2N1hmdz09</a></p>
             <Schedule />
