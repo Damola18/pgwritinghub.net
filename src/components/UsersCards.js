@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { GetUsers } from '../services/firebase'
-import { IconGroup, IconUserCheck, IconUsers } from '../utils/icons'
+import { IconGroup, IconUserCheck,IconUserSettingsVariant, IconUsers } from '../utils/icons'
 
 const UsersCards = () => {
     const [usersList, setUsersList] = useState()
     const [students, setStudents] = useState("0")
     const [tutors, setTutors] = useState("0")
     const [admins, setAdmins] = useState("0")
+    const [facilitators, setFacilitators] = useState("0")
     
     useEffect(() => {
         GetUsers().then(data => {
@@ -26,6 +27,10 @@ const UsersCards = () => {
     useEffect(() => {
         let adminList = usersList?.filter(user => user.role === "admin")
         setAdmins(adminList?.length)
+    }, [usersList])
+    useEffect(() => {
+        let facilitatorList = usersList?.filter(user => user.role === "facilitator")
+        setFacilitators(facilitatorList?.length)
     }, [usersList])
 
     return (
@@ -49,6 +54,12 @@ const UsersCards = () => {
                 <span style={{ color: "#F55F44", background: "#F55F4415"}}><IconUserCheck /></span>
                 <p>Admins</p>
                 <h2>{admins}</h2>
+            </div>
+
+            <div className="card">
+                <span style={{ color: "#000", background: "#ccc"}}><IconUserSettingsVariant /></span>
+                <p>Facilitators</p>
+                <h2>{facilitators}</h2>
             </div>
         </Cards>
     )
